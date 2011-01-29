@@ -6,7 +6,5 @@ public class BinaryTreeTest {
 
     @Test
     public void shouldFindAnElementThatExistsInTheTree() {
-        BinaryTree<Integer> tree = new BinaryTree<Integer>();
-
     }
 }
