@@ -2,23 +2,20 @@ package cs101.datastructures;
 
 import org.junit.Test;
 
-import java.util.HashMap;
-
 import static junit.framework.Assert.assertEquals;
 
 public class HuffmanEncoderTest {
 
-
     @Test
     public void shouldEncodeTheString() {
-        HashMap<String, Integer> frequencyDistribution = new HashMap<String, Integer>();
-        frequencyDistribution.put("A", 5);
-        frequencyDistribution.put("B", 7);
-        frequencyDistribution.put("C", 10);
-        frequencyDistribution.put("D", 15);
-        frequencyDistribution.put("E", 20);
-        frequencyDistribution.put("F", 45);
-        HuffmanEncoder encoder = new HuffmanEncoder(frequencyDistribution);
+        FrequencyDistribution distribution = new FrequencyDistribution();
+        distribution.put("A", 5);
+        distribution.put("B", 7);
+        distribution.put("C", 10);
+        distribution.put("D", 15);
+        distribution.put("E", 20);
+        distribution.put("F", 45);
+        HuffmanEncoder encoder = new HuffmanEncoder(distribution);
         assertEquals("010", encoder.encode("D"));
     }
 }
