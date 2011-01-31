@@ -1,4 +1,4 @@
-package cs101.datastructures;
+package cs101.datastructures.binarytrees;
 
 public class HuffmanTree {
     private Node root;

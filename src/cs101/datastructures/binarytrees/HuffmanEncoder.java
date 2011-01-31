@@ -1,4 +1,4 @@
-package cs101.datastructures;
+package cs101.datastructures.binarytrees;
 
 import java.util.Map;
 import java.util.Set;
