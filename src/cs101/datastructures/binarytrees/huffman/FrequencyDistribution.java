@@ -1,4 +1,4 @@
-package cs101.datastructures.binarytrees;
+package cs101.datastructures.binarytrees.huffman;
 
 import java.util.HashMap;
 

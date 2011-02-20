@@ -1,4 +1,4 @@
-package cs101.datastructures.binarytrees;
+package cs101.datastructures.binarytrees.huffman;
 
 public class HuffmanTree {
     private Node root;
@@ -12,6 +12,12 @@ public class HuffmanTree {
         return "HuffmanTree{" +
                 "root=" + root +
                 '}';
+    }
+
+    public String codeFor(String character) {
+        TreeWalker walker = new TreeWalker();
+        root.find(character, walker);
+        return walker.code();
     }
 
     public static class Node implements Comparable<Node> {
@@ -45,6 +51,36 @@ public class HuffmanTree {
                     ", right=" + right +
                     '}';
         }
+
+        public Node find(String character, TreeWalker walker) {
+            Node key = null;
+            if (isLeaf() && term.equals(character)) return this;
+            else if (left != null) {
+                key = left.find(character, walker);
+            } else if (right != null) {
+                key = right.find(character, walker);
+            }
+            return key;
+        }
+
+        public boolean isLeaf() {
+            return this.term != null;
+        }
     }
 
+    private static class TreeWalker {
+        private StringBuffer code = new StringBuffer();
+
+        public String code() {
+            return code.toString();
+        }
+
+        public void goLeft() {
+            code.append(0);
+        }
+
+        public void goRight() {
+            code.append(1);
+        }
+    }
 }

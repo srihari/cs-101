@@ -1,4 +1,4 @@
-package cs101.datastructures.binarytrees;
+package cs101.datastructures.binarytrees.huffman;
 
 import java.util.Map;
 import java.util.Set;
@@ -12,9 +12,9 @@ public class HuffmanEncoder {
         this.distribution = distribution;
     }
 
-    public String encode(String word) {
+    public String encode(String character) {
         HuffmanTree tree = createTree(distribution);
-        return "";
+        return tree.codeFor(character);
     }
 
     HuffmanTree createTree(FrequencyDistribution frequencyDistribution) {

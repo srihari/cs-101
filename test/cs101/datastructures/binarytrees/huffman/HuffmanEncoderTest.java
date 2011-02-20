@@ -1,7 +1,5 @@
-package cs101.datastructures;
+package cs101.datastructures.binarytrees.huffman;
 
-import cs101.datastructures.binarytrees.FrequencyDistribution;
-import cs101.datastructures.binarytrees.HuffmanEncoder;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;

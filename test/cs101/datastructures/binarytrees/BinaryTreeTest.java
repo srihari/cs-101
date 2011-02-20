@@ -1,4 +1,4 @@
-package cs101.datastructures;
+package cs101.datastructures.binarytrees;
 
 import org.junit.Test;
 
