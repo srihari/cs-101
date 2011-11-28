@@ -12,6 +12,18 @@ public class Vertex {
     }
 
     public void addEdge(String s) {
+        edges.add(new Edge(s));
+    }
 
+    public String print() {
+        String s = value;
+        for (Edge edge : edges) {
+            s += edge.print();
+        }
+        return s;
+    }
+
+    public int numberOfEdges() {
+        return edges.size();
     }
 }

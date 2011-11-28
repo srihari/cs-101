@@ -15,7 +15,8 @@ public class GraphTest {
         graph.addEdge("B", "F");
         graph.addEdge("D", "E");
         assertEquals(6, graph.vertices());
-        System.out.println(graph.print());
+        assertEquals(10, graph.edges());
+
     }
 
     @Test

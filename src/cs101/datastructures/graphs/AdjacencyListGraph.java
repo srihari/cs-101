@@ -32,7 +32,19 @@ public class AdjacencyListGraph {
         return vertices.size();
     }
 
+    public int edges() {
+        int count = 0;
+        for (Vertex vertex : vertices.values()) {
+            count += vertex.numberOfEdges();
+        }
+        return count;
+    }
+
     public String print() {
-        return null;
+        String s = "";
+        for (Vertex entry : vertices.values()) {
+            s += entry.print();
+        }
+        return s;
     }
 }
